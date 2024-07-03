@@ -1,3 +1,4 @@
 import "./style.css";
+import {generateHomePage} from "./home.js"
 
-console.log("HI I am the src/index.js file")
+generateHomePage();

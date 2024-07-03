@@ -10,7 +10,18 @@ body{
     height: 100%;
 
 }
-
+header{
+    text-align: center;
+    padding: 10px 0px;
+}
+nav > button{
+    width: 150px;
+    height: 50px;
+    font-size: 1.4em;
+}
+nav{
+    margin-top: 15px;
+}
 main{
     display: flex;
     height: 100%;
@@ -22,6 +33,8 @@ main{
 #content{
     text-align: center;
     width: 70%;
+    line-height: 40px;
+    font-size: 2em;
 }
 
 .content-container{
