@@ -14,15 +14,21 @@ module.exports = {
         static: "./dist",
         watchFiles: ['src/*.html',]
     },
-    /* optimization:{
-        runtimeChunk: "single",
-    }, */
     plugins: [
         new HtmlWebpackPlugin({
             inject: "head",
             scriptLoading: "defer",
             template: "./src/index.html"
         })
-    ]
+    ],
+    module:{
+        rules: [
+            {
+                test: /\.css$/i,
+                use: ["style-loader", "css-loader"],
+            }
+        ]
+
+    }
     
 }
