@@ -1,4 +1,6 @@
 import "./style.css";
 import {generateHomePage} from "./home.js"
 
-generateHomePage();
+
+generateHomePage.createNavBar();
+generateHomePage.createAboutSection();

@@ -1,22 +1,25 @@
 
-function generateHomePage(){
+let generateHomePage =  (function (){
     const header = document.createElement("header");
-        const restaurantName = document.createElement("h1");
-            restaurantName.textContent = "Ethiopian Restaurant"
 
-    const nav = document.createElement("nav");
-    const homeButton = document.createElement("button");
-        homeButton.textContent = "Home";
-    const menuButton = document.createElement("button");
-        menuButton.textContent = "Menu";
-    const aboutButton = document.createElement("button");
-        aboutButton.textContent = "About";
+    function createNavBar(){
+            const restaurantName = document.createElement("h1");
+                restaurantName.textContent = "Ethiopian Restaurant"
 
-    nav.append(homeButton,menuButton,aboutButton);
-    header.append(restaurantName,nav);
+        const nav = document.createElement("nav");
+        const homeButton = document.createElement("button");
+            homeButton.textContent = "Home";
+        const menuButton = document.createElement("button");
+            menuButton.textContent = "Menu";
+        const aboutButton = document.createElement("button");
+            aboutButton.textContent = "About";
+
+        nav.append(homeButton,menuButton,aboutButton);
+        header.append(restaurantName,nav);
+    }
   
 
-
+function createAboutSection(){
     const main = document.createElement("main");
     const containerDiv = document.createElement("div");
         containerDiv.setAttribute("id", "content");
@@ -34,8 +37,9 @@ function generateHomePage(){
      containerDiv.append(about, description);
 
     document.body.append(header, main);
-
-    console.log("i worked")
-
 }
+
+  return {createNavBar, createAboutSection}
+
+})();
 export {generateHomePage};
