@@ -16,6 +16,9 @@ let generateHomePage =  (function (){
 
         nav.append(homeButton,menuButton,aboutButton);
         header.append(restaurantName,nav);
+
+        document.body.append(header);
+        
     }
   
 
@@ -36,7 +39,7 @@ function createAboutSection(){
      main.appendChild(containerDiv)
      containerDiv.append(about, description);
 
-    document.body.append(header, main);
+    document.body.append( main);
 }
 
   return {createNavBar, createAboutSection}

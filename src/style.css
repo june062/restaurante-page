@@ -10,6 +10,8 @@ body{
     height: 100%;
 
 }
+
+/* Home styling */
 header{
     text-align: center;
     padding: 10px 0px;
@@ -41,4 +43,27 @@ main{
     display: flex;
     justify-content: center;
     
+}
+
+
+/* Menu styling */
+
+.menu-content{
+    height: 100%;
+    width: 70%;
+    display: grid;
+    border: solid black;
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.menu-content > div{
+    border: solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 80px;
+}
+
+.menu-content > div > span{
+    font-size: 40px;
 }
