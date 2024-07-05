@@ -1,10 +1,11 @@
 import {generateHomePage} from "./home.js";
 import "./style.css";
 
-let {createNavBar} = generateHomePage;
+let {createNavBar, removeDOMElements} = generateHomePage;
 
 export function createMenuPage(){
-    createNavBar();
+    removeDOMElements();
+    
 
     let menuMain = document.createElement("main");
     let menuContentDiv = document.createElement("div")

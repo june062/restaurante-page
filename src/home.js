@@ -1,6 +1,17 @@
 
 let generateHomePage =  (function (){
     const header = document.createElement("header");
+    
+
+    function removeDOMElements(){
+        let main = document.querySelector('main');
+         while (main.hasChildNodes()){
+            main.removeChild(main.lastChild);
+        }  
+        main.remove();
+       /* console.log(document.body.firstElementChild) */
+
+    }
 
     function createNavBar(){
             const restaurantName = document.createElement("h1");
@@ -9,12 +20,17 @@ let generateHomePage =  (function (){
         const nav = document.createElement("nav");
         const homeButton = document.createElement("button");
             homeButton.textContent = "Home";
+            homeButton.classList.add("home-button")
+
         const menuButton = document.createElement("button");
             menuButton.textContent = "Menu";
-        const aboutButton = document.createElement("button");
-            aboutButton.textContent = "About";
+            menuButton.classList.add('menu-button');
 
-        nav.append(homeButton,menuButton,aboutButton);
+        const contactButton = document.createElement("button");
+            contactButton.textContent = "Contact";
+            contactButton.classList.add("contact-button");
+
+        nav.append(homeButton,menuButton,contactButton);
         header.append(restaurantName,nav);
 
         document.body.append(header);
@@ -42,7 +58,7 @@ function createAboutSection(){
     document.body.append( main);
 }
 
-  return {createNavBar, createAboutSection}
+  return {createNavBar, createAboutSection, removeDOMElements}
 
 })();
 export {generateHomePage};
