@@ -20,5 +20,5 @@ homeButton.addEventListener("click",()=>{
     generateHomePage.createAboutSection();
 } );
 
-menuButton.addEventListener("click", createMenuPage());
-contactButton.addEventListener("click", createContactPage());  
+menuButton.addEventListener("click", createMenuPage);
+contactButton.addEventListener("click", createContactPage);   
